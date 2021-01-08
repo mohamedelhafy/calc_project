@@ -56,7 +56,7 @@
                  xor ebx, ebx
                  xor ecx, ecx
                  lea edx, string2
-              LOOP1:
+              LOOP2:
 	         mov bl, [string1 + esi]
                  cmp bl, SYM_MUL
 	         JE MUL_Cont
@@ -69,7 +69,7 @@
                  Inc_lbl:
                  inc esi
 	         inc edi
-	       JMP LOOP1
+	       JMP LOOP2
 	         MUL_Cont:
 	         lea edx, string2
 	         call ParseInteger32
