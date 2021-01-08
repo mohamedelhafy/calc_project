@@ -81,3 +81,15 @@
                	 IDIV PARSE_RES
 	         MOV RES_MUL, EAX
 	         JMP Cont_MUL
+
+                 MUL_RES:
+	         IMUL EAX, RES_MUL
+	         MOV RES_MUL, EAX
+	         Cont_MUL:
+	         MOV CURR_SYM_MUL, '*'
+	         MOV edi, -1
+	         MOV ecx, 0
+	         push eax
+	         call resetstring2
+	         pop eax
+	         JMP Inc_lbl
