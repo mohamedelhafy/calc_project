@@ -65,6 +65,21 @@
 	          call resetstring1
 	          pop eax
 	          JMP Inc_lbl
+		  SUB_Cont:
+	          push esi
+       	          push edi
+	          push edx
+	          push ecx
+	          call splitByMul
+	          pop ecx
+	          pop edx
+	          pop edi
+		  pop esi
+		  cmp CURR_SYM_ADD, '+'
+		  JE ADD_RES2
+		  MOV EAX, RES_MUL
+		  SUB RES_ADD, EAX
+		  JMP Cont_SUB
 
                 splitByAdd ENDP 
 
