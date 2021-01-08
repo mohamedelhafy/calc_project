@@ -45,6 +45,15 @@
 	          push edx
 	          push ecx
 	          call splitByMul
+		  pop ecx
+                  pop edx
+		  pop edi
+   		  pop esi
+		  cmp CURR_SYM_ADD, '+'
+		  JE ADD_RES
+		  MOV EAX, RES_MUL
+	          SUB RES_ADD, EAX
+		  JMP Cont_ADD
 
                 splitByAdd ENDP 
 
