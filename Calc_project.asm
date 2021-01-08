@@ -81,32 +81,42 @@
 		  SUB RES_ADD, EAX
 		  JMP Cont_SUB
                   ADD_RES2:
-	MOV EAX, RES_MUL
-	ADD RES_ADD, EAX
-	Cont_SUB:
-	MOV CURR_SYM_ADD, '-'
-	MOV edi, -1
-	push eax
-	call resetstring1
-	pop eax
-	JMP Inc_lbl
-	
-	End_Cont:
-	push esi
-	push edi
-	push edx
-	push ecx
-	call splitByMul
-	pop ecx
-	pop edx
-	pop edi
-	pop esi
-	cmp CURR_SYM_ADD, '+'
-	JE ADD_RES3
-	MOV EAX, RES_MUL
-	SUB RES_ADD, EAX
-	JMP Cont_F2
+	       	  MOV EAX, RES_MUL
+		  ADD RES_ADD, EAX
+		  Cont_SUB:
+		  MOV CURR_SYM_ADD, '-'
+		  MOV edi, -1
+		  push eax
+		  call resetstring1
+		  pop eax
+		  JMP Inc_lbl
 
+		  End_Cont:
+		  push esi
+		  push edi
+		  push edx
+		  push ecx
+		  call splitByMul
+		  pop ecx
+		  pop edx
+		  pop edi
+		  pop esi
+		  cmp CURR_SYM_ADD, '+'
+		  JE ADD_RES3
+		  MOV EAX, RES_MUL
+		  SUB RES_ADD, EAX
+		  JMP Cont_F2
+		  
+		  ADD_RES3:
+		  MOV EAX, RES_MUL
+		  ADD RES_ADD, EAX
+		  
+		  Cont_F2:
+		  MOV CURR_SYM_ADD, '+'
+		  push eax
+		  call resetstring1
+		  pop eax
+		  ret
                 splitByAdd ENDP 
 
                 splitByMul PROC
