@@ -37,5 +37,11 @@
 	          mov cl, [edx + esi]
 	          CMP cl, 0
 	          JE End_Cont
+		  End_Cont:
+	          push esi
+	          push edi
+	          push edx
+	          push ecx
+	          call splitByMul
 
                 splitByAdd ENDP 
