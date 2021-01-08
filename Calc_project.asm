@@ -19,3 +19,10 @@
     		RES_ADD DWORD 0
 		RES_MUL DWORD 1
 		PARSE_RES DWORD 0
+
+               main PROC
+                lea edx, stringIn
+                mov ecx, MAX+1
+                call ReadString
+
+                main ENDP
