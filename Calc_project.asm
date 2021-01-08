@@ -58,6 +58,15 @@
                  lea edx, string2
               LOOP1:
 	         mov bl, [string1 + esi]
-
-
+                 cmp bl, SYM_MUL
+	         JE MUL_Cont
+	         cmp bl, SYM_DIV
+	         JE DIV_Cont
+                 CMP bl, 0
+	         JE End_Cont
+                 mov [string2 + edi], bl
+	         inc ecx
+                 Inc_lbl: inc esi
+	         inc edi
+	       JMP LOOP1
 	
