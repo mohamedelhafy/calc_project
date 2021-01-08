@@ -83,7 +83,7 @@
 	         JMP Cont_MUL
 
                  MUL_RES:
-	         IMUL EAX, RES_MUL
+	         IMUL RES_MUL
 	         MOV RES_MUL, EAX
 	         Cont_MUL:
 	         MOV CURR_SYM_MUL, '*'
@@ -105,3 +105,14 @@
 	         IDIV PARSE_RES
 	         MOV RES_MUL, EAX
 		 JMP Cont_DIV
+		 MUL_RES2:
+		 IMUL RES_MUL
+		 MOV RES_MUL, EAX
+		 Cont_DIV:
+		 MOV CURR_SYM_MUL, '/'
+		 MOV edi, -1
+		 mov ecx, 0
+		 push eax
+		 call resetstring2
+		 pop eax
+		 JMP Inc_lbl
