@@ -135,4 +135,6 @@
 		 push eax
 		 call resetstring2
 		 pop eax
+                 ret
 
+                splitByMul ENDP
