@@ -66,7 +66,18 @@
 	         JE End_Cont
                  mov [string2 + edi], bl
 	         inc ecx
-                 Inc_lbl: inc esi
+                 Inc_lbl:
+                 inc esi
 	         inc edi
 	       JMP LOOP1
-	
+	         MUL_Cont:
+	         lea edx, string2
+	         call ParseInteger32
+	         cmp CURR_SYM_MUL, '*'
+	         JE MUL_RES
+	         MOV PARSE_RES, EAX
+	         MOV EAX, RES_MUL
+	         mov edx, 0
+               	 IDIV PARSE_RES
+	         MOV RES_MUL, EAX
+	         JMP Cont_MUL
