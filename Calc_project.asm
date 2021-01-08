@@ -26,3 +26,16 @@
                 call ReadString
 
                 main ENDP
+                
+
+                splitByAdd PROC
+                xor esi, esi
+                xor edi, edi
+                
+
+                LOOP1:
+	          mov cl, [edx + esi]
+	          CMP cl, 0
+	          JE End_Cont
+
+                splitByAdd ENDP 
