@@ -21,7 +21,7 @@
     		RES_ADD DWORD 0
 		RES_MUL DWORD 1
 		PARSE_RES DWORD 0
-
+               .code
                main PROC
                 lea edx, stringIn
                  mov ecx, MAX+1
