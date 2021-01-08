@@ -54,6 +54,17 @@
 		  MOV EAX, RES_MUL
 	          SUB RES_ADD, EAX
 		  JMP Cont_ADD
+                   
+                  ADD_RES:
+	          MOV EAX, RES_MUL
+	          ADD RES_ADD, EAX
+	          Cont_ADD:
+	          MOV CURR_SYM_ADD, '+'
+	          MOV edi, -1
+	          push eax
+	          call resetstring1
+	          pop eax
+	          JMP Inc_lbl
 
                 splitByAdd ENDP 
 
