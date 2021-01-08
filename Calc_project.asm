@@ -116,3 +116,23 @@
 		 call resetstring2
 		 pop eax
 		 JMP Inc_lbl
+		 End_Cont2:
+		 lea edx, string2
+		 call ParseInteger32
+		 cmp CURR_SYM_MUL, '*'
+		 JE MUL_RES3
+		 MOV PARSE_RES, EAX
+		 MOV EAX, RES_MUL
+		 mov edx, 0
+		 IDIV PARSE_RES
+		 MOV RES_MUL, EAX
+		 JMP Cont_F
+		 MUL_RES3:
+		 IMUL EAX, RES_MUL
+		 MOV RES_MUL, EAX
+		 Cont_F:
+		 MOV CURR_SYM_MUL, '*'
+		 push eax
+		 call resetstring2
+		 pop eax
+
