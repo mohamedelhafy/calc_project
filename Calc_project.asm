@@ -10,6 +10,8 @@
 	.data
 		MAX = 100
 		stringIn BYTE MAX+1 DUP(?), 0
+                string1 BYTE MAX+1 DUP(?), 0
+                string2 BYTE MAX+1 DUP(?), 0
    		SYM_ADD BYTE '+'
 		SYM_SUB BYTE '-'
 		SYM_MUL BYTE '*'
@@ -22,7 +24,7 @@
 
                main PROC
                 lea edx, stringIn
-                mov ecx, MAX+1
+                 mov ecx, MAX+1
                 call ReadString
 
                 main ENDP
@@ -33,7 +35,7 @@
                 xor edi, edi
                 
 
-                LOOP1:
+               LOOP1:
 	          mov cl, [edx + esi]
 	          CMP cl, 0
 	          JE End_Cont
@@ -45,3 +47,17 @@
 	          call splitByMul
 
                 splitByAdd ENDP 
+
+                splitByMul PROC
+
+                 MOV RES_MUL, 1
+                 xor esi, esi
+                 xor edi, edi
+                 xor ebx, ebx
+                 xor ecx, ecx
+                 lea edx, string2
+              LOOP1:
+	         mov bl, [string1 + esi]
+
+
+	
