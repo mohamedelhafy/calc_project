@@ -93,3 +93,15 @@
 	         call resetstring2
 	         pop eax
 	         JMP Inc_lbl
+
+                 DIV_Cont:
+	         lea edx, string2
+	         call ParseInteger32
+	         cmp CURR_SYM_MUL, '*'
+	         JE MUL_RES2
+	         MOV PARSE_RES, EAX
+	         MOV EAX, RES_MUL
+	         MOV edx, 0
+	         IDIV PARSE_RES
+	         MOV RES_MUL, EAX
+		 JMP Cont_DIV
