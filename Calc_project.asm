@@ -63,7 +63,7 @@
 	         cmp bl, SYM_DIV
 	         JE DIV_Cont
                  CMP bl, 0
-	         JE End_Cont
+	         JE End_Cont2
                  mov [string2 + edi], bl
 	         inc ecx
                  Inc_lbl:
