@@ -39,7 +39,16 @@
 	          mov cl, [edx + esi]
 	          CMP cl, 0
 	          JE End_Cont
-		  End_Cont:
+		  cmp cl, SYM_ADD
+	          JE ADD_Cont
+		  cmp cl, SYM_SUB
+	          JE SUB_Cont
+	          mov [string1 + edi], cl
+                  Inc_lbl: inc esi
+	          inc edi
+	          JMP LOOP1
+	          
+		  ADD_Cont:
 	          push esi
 	          push edi
 	          push edx
@@ -65,6 +74,7 @@
 	          call resetstring1
 	          pop eax
 	          JMP Inc_lbl
+		  
 		  SUB_Cont:
 	          push esi
        	          push edi
@@ -137,7 +147,7 @@
 	         JE End_Cont2
                  mov [string2 + edi], bl
 	         inc ecx
-                 Inc_lbl:
+                 Inc_lb2:
                  inc esi
 	         inc edi
 	       JMP LOOP2
@@ -163,7 +173,7 @@
 	         push eax
 	         call resetstring2
 	         pop eax
-	         JMP Inc_lbl
+	         JMP Inc_lb2
 
                  DIV_Cont:
 	         lea edx, string2
@@ -186,7 +196,7 @@
 		 push eax
 		 call resetstring2
 		 pop eax
-		 JMP Inc_lbl
+		 JMP Inc_lb2
 		 End_Cont2:
 		 lea edx, string2
 		 call ParseInteger32
