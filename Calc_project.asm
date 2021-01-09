@@ -236,20 +236,18 @@
 		MOV [string1 + eax], 0
 		inc eax
 		JMP LOOP1
-		Finish:
-		ret
+	Finish: ret
 	resetstring1 ENDP	
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	resetstring2 PROC
+		mov eax, 0
+		LOOP1: cmp eax, MAX+1
+		JG Finish
+		MOV [string2 + eax], 0
+		inc eax
+		JMP LOOP1
+	Finish: ret
+	resetstring2 ENDP
+	END main		
 		
