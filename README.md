@@ -63,3 +63,7 @@ this function is called when the process character (sym-mul) after or before the
 a division process is performed.
 
 -  ## Result
+
+<img src="https://user images.githubusercontent.com/36426512/104137677-3fcd6000 53a7-11eb-9406-38d84d78945f.PNG" width="400" height="100">
+
+
