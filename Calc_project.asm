@@ -217,7 +217,7 @@
 		 JMP Cont_F
 		 
 	     MUL_RES3:
-		 IMUL EAX, RES_MUL
+		 IMUL RES_MUL
 		 MOV RES_MUL, EAX
 		 Cont_F:
 		 MOV CURR_SYM_MUL, '*'
