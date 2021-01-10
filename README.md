@@ -36,3 +36,5 @@ it executes the adding operation
 Sub-cont function:-
 this function is called when the next character (sym-add) is the '-' sign so, 
 this function calculates the blocks before and after it and then, executes subtracting process. 
+
+<img src="https://user-images.githubusercontent.com/76923461/104137190-b6685e80-53a3-11eb-9f07-5c997af2809d.PNG" width="150" height="250">
