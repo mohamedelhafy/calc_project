@@ -45,3 +45,19 @@ and when reaching to the end of the string after ending multiplication or divisi
 
 
 <img src="https://user-images.githubusercontent.com/36426512/104137427-3d6a0680-53a5-11eb-96d4-f80c6016c3ab.jpg" width="500" height="300">
+
+
+End-Cont function:- 
+
+this function will be executed when the string is empty which is the end of the string so,
+this function gets the final value of the equation. 
+
+mul-count function:-  
+
+this function is called when the process character (sym-mul)  after or before the '-' or '+' signs is the '*' process character so,
+a multiplication process is performed.    
+
+div-cont function:- 
+
+this function is called when the process character (sym-mul) after or before the '+' or '-' signs is the '/' process character so,
+a division process is performed.
