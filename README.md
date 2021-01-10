@@ -38,3 +38,6 @@ this function is called when the next character (sym-add) is the '-' sign so,
 this function calculates the blocks before and after it and then, executes subtracting process. 
 
 <img src="https://user-images.githubusercontent.com/76923461/104137190-b6685e80-53a3-11eb-9f07-5c997af2809d.PNG" width="150" height="250">
+
+when splitbyadd read sum symbol or subtract symbol this function will call splitbymul in order to implement multiplication or division operations then store the result until complete another operations
+and when reaching to the end of the string after ending multiplication or division operation will return to the place which calls this function in splitbyadd
