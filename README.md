@@ -16,4 +16,4 @@ the block after this sign individually to execute multiplication and division pr
 
 -  ## Code explanation
 
-<img src="https://user-images.githubusercontent.com/76923461/104135963-cf6d1180-539b-11eb-9e80-323ce1a55dac.PNG" width="250" height="250">
+<img src="https://user-images.githubusercontent.com/76923461/104135963-cf6d1180-539b-11eb-9e80-323ce1a55dac.PNG" width="150" height="250">
