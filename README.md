@@ -41,3 +41,7 @@ this function calculates the blocks before and after it and then, executes subtr
 
 when splitbyadd read sum symbol or subtract symbol this function will call splitbymul in order to implement multiplication or division operations then store the result until complete another operations
 and when reaching to the end of the string after ending multiplication or division operation will return to the place which calls this function in splitbyadd
+
+
+
+<img src="https://user-images.githubusercontent.com/36426512/104137427-3d6a0680-53a5-11eb-96d4-f80c6016c3ab.jpg" width="500" height="300">
