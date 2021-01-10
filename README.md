@@ -1,2 +1,2 @@
-# Simple calculator by assembly code 
+# Simple calculator by assembly code
 
