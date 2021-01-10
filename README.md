@@ -17,4 +17,4 @@ the block after this sign individually to execute multiplication and division pr
 -  ## Code explanation
 
 
-![alt text](https://drive.google.com/file/d/1wZiVez8pqZjjcEVPFb7_Bj94BGs78EUV/view?usp=sharing/200/300)
+![alt text](D:\calc\calc_project/200/300)
