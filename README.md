@@ -1,2 +1,2 @@
-# calc_project ; Assembly 
+# Simple calculator by assembly code 
 
