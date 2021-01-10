@@ -20,3 +20,19 @@ the block after this sign individually to execute multiplication and division pr
 Splitbyadd check all index until we found -or + operation  then splitbymul is called After return we check again all index after -or + operationAnd execute other operations
 
 <img src="https://user-images.githubusercontent.com/77008342/104136726-98e5c580-53a0-11eb-9ec2-f965bc46e02d.png" width="500" height="300">
+
+
+End-Cont function:-
+
+this function will be executed when the string is empty which is the end of the string so, 
+this function gets the final value of the equation.
+
+Add-count function:-
+
+this function is called when the next character (sym-add) is the '+' sign so, 
+this function calculate the blocks before and after this sign then,
+it executes the adding operation
+
+Sub-cont function:-
+this function is called when the next character (sym-add) is the '-' sign so, 
+this function calculates the blocks before and after it and then, executes subtracting process. 
