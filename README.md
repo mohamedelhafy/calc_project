@@ -17,7 +17,7 @@ the block after this sign individually to execute multiplication and division pr
 -  ## Code explanation
 
 <img src="https://user-images.githubusercontent.com/40215551/104139274-07cc1a00-53b3-11eb-863f-9e68e5707866.png" width="180" height="250">
-
+we moving the index of the frist element in stringIn in eax register and max+1 in ecx 
 
 
 
