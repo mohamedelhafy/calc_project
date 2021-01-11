@@ -16,6 +16,11 @@ the block after this sign individually to execute multiplication and division pr
 
 -  ## Code explanation
 
+<img src="https://user-images.githubusercontent.com/40215551/104139274-07cc1a00-53b3-11eb-863f-9e68e5707866.png" width="180" height="250">
+
+
+
+
 <img src="https://user-images.githubusercontent.com/76923461/104135963-cf6d1180-539b-11eb-9e80-323ce1a55dac.PNG" width="180" height="250">
 Splitbyadd check all index until we found -or + operation  then splitbymul is called After return we check again all index after -or + operationAnd execute other operations
 
