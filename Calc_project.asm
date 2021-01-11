@@ -1,4 +1,4 @@
-	.386
+.386
 	.model flat,stdcall
 	.stack 4096
 	ExitProcess PROTO, dwExitCode:DWORD
@@ -8,27 +8,34 @@
 
 
 	.data
+		Zero = 0
 		MAX = 100
 		stringIn BYTE MAX+1 DUP(?), 0
-                string1 BYTE MAX+1 DUP(?), 0
-                string2 BYTE MAX+1 DUP(?), 0
-   		SYM_ADD BYTE '+'
+		string1 BYTE MAX+1 DUP(?), 0
+		string2 BYTE MAX+1 DUP(?), 0
+		SYM_ADD BYTE '+'
 		SYM_SUB BYTE '-'
 		SYM_MUL BYTE '*'
 		SYM_DIV BYTE '/'
-    		CURR_SYM_ADD BYTE '+'
+		CURR_SYM_ADD BYTE '+'
 		CURR_SYM_MUL BYTE '*'
-    		RES_ADD DWORD 0
+		RES_ADD DWORD 0
 		RES_MUL DWORD 1
 		PARSE_RES DWORD 0
+		errorChick DWORD 1
+		errorMag  db 'math Error cant divid by zero',0
       .code
         main PROC
+		
                 lea edx, stringIn
                 mov ecx, MAX+1
                 call ReadString
 		call splitByAdd	
+		cmp errorChick , 0
+		JE endCalc
 		mov eax, RES_ADD
 		call writeint
+	endCalc:
 		INVOKE ExitProcess,0
 
         main ENDP
@@ -185,6 +192,8 @@
 		 call ParseInteger32
 		 cmp CURR_SYM_MUL, '*'
 		 JE MUL_RES2
+		 cmp EAX, '0'
+		 JE Error
 		 MOV PARSE_RES, EAX
 		 MOV EAX, RES_MUL
 		 MOV edx, 0
@@ -211,6 +220,8 @@
 		 JE MUL_RES3
 		 MOV PARSE_RES, EAX
 		 MOV EAX, RES_MUL
+		 cmp PARSE_RES , Zero
+		 JE Error
 		 mov edx, 0
 		 IDIV PARSE_RES
 		 MOV RES_MUL, EAX
@@ -224,30 +235,37 @@
 		 push eax
 		 call resetstring2
 		 pop eax
-		 ret
+		 JMP finish
+
+	       Error:
+		  mov edx, OFFSET errorMag    
+		  CALL WriteString
+		  mov edx , Zero
+		  mov errorChick , edx
+			  
+		finish: ret
 
 	splitByMul ENDP
 		
 		
 	resetstring1 PROC
 		mov eax, 0
-		LOOP1: cmp eax, MAX+1
+		LOOP3: cmp eax, MAX+1
 		JG Finish
 		MOV [string1 + eax], 0
 		inc eax
-		JMP LOOP1
+		JMP LOOP3
 	Finish: ret
 	resetstring1 ENDP	
 		
 		
 	resetstring2 PROC
 		mov eax, 0
-		LOOP1: cmp eax, MAX+1
+		LOOP4: cmp eax, MAX+1
 		JG Finish
 		MOV [string2 + eax], 0
 		inc eax
-		JMP LOOP1
+		JMP LOOP4
 	Finish: ret
 	resetstring2 ENDP
 	END main		
-		
