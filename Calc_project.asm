@@ -1,3 +1,4 @@
+  
 .386
 	.model flat,stdcall
 	.stack 4096
@@ -23,7 +24,7 @@
 		RES_MUL DWORD 1
 		PARSE_RES DWORD 0
 		errorChick DWORD 1
-		errorMag  db 'math Error cant divid by zero',0
+		errorMag  db 'math Error cant divid by zero please inter right eqution ',0
       .code
         main PROC
 		
@@ -31,11 +32,8 @@
                 mov ecx, MAX+1
                 call ReadString
 		call splitByAdd	
-		cmp errorChick , 0
-		JE endCalc
 		mov eax, RES_ADD
 		call writeint
-	endCalc:
 		INVOKE ExitProcess,0
 
         main ENDP
@@ -240,8 +238,7 @@
 	       Error:
 		  mov edx, OFFSET errorMag    
 		  CALL WriteString
-		  mov edx , Zero
-		  mov errorChick , edx
+		  INVOKE ExitProcess,0
 			  
 		finish: ret
 
