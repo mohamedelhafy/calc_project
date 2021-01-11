@@ -17,7 +17,8 @@ the block after this sign individually to execute multiplication and division pr
 -  ## Code explanation
 
 <img src="https://user-images.githubusercontent.com/40215551/104139274-07cc1a00-53b3-11eb-863f-9e68e5707866.png" width="180" height="250">
-we moving the index of the frist element in stringIn in eax register and max+1 in ecx 
+we moving the index of the frist element in stringIn in eax register and max+1 in ecx then call the readstring function which the irvine function 
+which can read the input in a string form and it restore the value which readed in the sting its index added to eax so we store the index of stringIn string in eax  and then call splitbyadd function which will do the hard work and the splitbymul then when the function return write the answer with the irvine function 
 
 
 
