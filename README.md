@@ -28,18 +28,18 @@ Splitbyadd check all index until we found -or + operation  then splitbymul is ca
 <img src="https://user-images.githubusercontent.com/77008342/104136726-98e5c580-53a0-11eb-9ec2-f965bc46e02d.png" width="500" height="300">
 
 
-End-Cont function:-
+End-Cont label:-
 
 this function will be executed when the string is empty which is the end of the string so, 
 this function gets the final value of the equation.
 
-Add-count function:-
+Add-count label:-
 
 this function is called when the next character (sym-add) is the '+' sign so, 
 this function calculate the blocks before and after this sign then,
 it executes the adding operation
 
-Sub-cont function:-
+Sub-cont label:-
 this function is called when the next character (sym-add) is the '-' sign so, 
 this function calculates the blocks before and after it and then, executes subtracting process. 
 
@@ -53,17 +53,17 @@ and when reaching to the end of the string after ending multiplication or divisi
 <img src="https://user-images.githubusercontent.com/36426512/104137427-3d6a0680-53a5-11eb-96d4-f80c6016c3ab.jpg" width="500" height="300">
 
 
-End-Cont function:- 
+End-Cont label:- 
 
 this function will be executed when the string is empty which is the end of the string so,
 this function gets the final value of the equation. 
 
-mul-count function:-  
+mul-count label:-  
 
 this function is called when the process character (sym-mul)  after or before the '-' or '+' signs is the '*' process character so,
 a multiplication process is performed.    
 
-div-cont function:- 
+div-cont label:- 
 
 this function is called when the process character (sym-mul) after or before the '+' or '-' signs is the '/' process character so,
 a division process is performed.
