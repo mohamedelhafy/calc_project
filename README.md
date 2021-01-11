@@ -72,6 +72,6 @@ a division process is performed.
 
 -  ## Result
 
-<img src="https://user-images.githubusercontent.com/36426512/104137677-3fcd6000-53a7-11eb-9406-38d84d78945f.PNG" width="600" height="100">
+<img src="https://user-images.githubusercontent.com/40215551/104139891-0c92cd00-53b7-11eb-96fb-e14baabdf119.png" width="600" height="100">
 
 
