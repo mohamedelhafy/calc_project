@@ -68,6 +68,8 @@ div-cont function:-
 this function is called when the process character (sym-mul) after or before the '+' or '-' signs is the '/' process character so,
 a division process is performed.
 
+<img src="https://user-images.githubusercontent.com/40215551/104139775-59c26f00-53b6-11eb-80d2-e1e42864cd4f.png" width="600" height="100">
+
 -  ## Result
 
 <img src="https://user-images.githubusercontent.com/36426512/104137677-3fcd6000-53a7-11eb-9406-38d84d78945f.PNG" width="600" height="100">
