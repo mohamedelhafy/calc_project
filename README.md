@@ -68,7 +68,7 @@ div-cont label:-
 this function is called when the process character (sym-mul) after or before the '+' or '-' signs is the '/' process character so,
 a division process is performed.
 
-<img src="https://user-images.githubusercontent.com/40215551/104139891-0c92cd00-53b7-11eb-96fb-e14baabdf119.png" width="600" height="100">
+<img src="https://user-images.githubusercontent.com/40215551/104139891-0c92cd00-53b7-11eb-96fb-e14baabdf119.png" >
 
 -  ## Result
 
