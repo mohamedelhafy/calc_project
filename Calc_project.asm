@@ -24,7 +24,7 @@
 		RES_MUL DWORD 1
 		PARSE_RES DWORD 0
 		errorChick DWORD 1
-		errorMag  db 'Math Error can't divide by zero please enter the right equation ',0
+		errorMag  db 'Math Error can not divide by zero please Enter the right equation',0
       .code
         main PROC
 		
