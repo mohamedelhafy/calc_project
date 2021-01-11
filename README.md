@@ -71,8 +71,29 @@ a division process is performed.
 <img src="https://user-images.githubusercontent.com/40215551/104139891-0c92cd00-53b7-11eb-96fb-e14baabdf119.png" >
 to reset the string we should fill it with 0 
 we loop in the strin one or 2 to fill it to 0
+
+
 -  ## Result
 
+
 <img src="https://user-images.githubusercontent.com/36426512/104137677-3fcd6000-53a7-11eb-9406-38d84d78945f.PNG" width="600" height="100">
+
+
+<img src="https://user-images.githubusercontent.com/36426512/104178576-41cd0880-5413-11eb-8a8d-c30ac9ae2097.PNG" width="600" height="100">
+
+
+-  ## Team members
+
+
+ - Mahmoud Mohamed Saeed (mahmoud168280@feng.bu.edu.eg)
+
+ - Taher Magdy Ashour (taher160398@feng.bu.edu.eg)
+
+ - Mohamed Farg Fadly (mohamed160711@feng.bu.edu.eg)
+
+ - Mohamed Adel Zohery (mohamed160675@feng.bu.edu.eg)
+
+ - Islam Qodera (islam160188@feng.bu.edu.eg)
+
 
 
